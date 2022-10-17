@@ -44,7 +44,7 @@ public class SignUpDto {
 
     public User toEntity(){
         return User .builder()
-                .id(id)
+                .email(id)
                 .password(password)
                 .name(name)
                 .address(address)

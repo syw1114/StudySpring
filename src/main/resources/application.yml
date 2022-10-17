@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://database-1.cdvypkiasxqr.ap-northeast-2.rds.amazonaws.com:3306/stussy-20220930?allowMultiQueries=true
+    url: jdbc:mariadb://database-1.cdvypkiasxqr.ap-northeast-2.rds.amazonaws.com:3306/stussy-20220930
     username: admin
     password: 1q2w3e4r
 
@@ -18,4 +18,4 @@ spring:
 
 mybatis:
   mapper-locations:
-    - /mapper/*.xml
+    - /mappers/*.xml

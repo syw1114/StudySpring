@@ -19,10 +19,10 @@ public class User {
     private String name;
     private String provider;
     private String address;
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    private int role_id;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
+
 
     private Role role;
 
