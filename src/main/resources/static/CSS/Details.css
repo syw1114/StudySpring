@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top {
+    display: flex;
+    justify-content: center;
+}
+.image {
+    margin-right: 50px;
+}
+.info {
+    display: flex;
+}
+table {
+    text-align: center;
+    margin: 10px 0px;   
+}
+
+#count-box {
+    width: 50px;
+    text-align: center;
+}
+tfoot button {
+	font-size: 20px;
+	padding: 15px 30px;
+	margin: 10px 0px;
+
+    border-radius: 5px;
+}
+.btn1 {
+	background-color: #000;
+	color: #fff;
+}
+
+.btn1:hover {
+	background: #FE2E2E;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>review</title>
+  <!-- <link rel="stylesheet" href="qna.css"> -->
+  <link rel="stylesheet" href="/CSS/review.css">
+
+</head>
+<body>
+
+  <div id="container">
+    <div id="title-box">
+      <div id="title"><h2>Review</h2></div> 
+    </div>
+    <inform>
+      <table id="table1">
+          <tr>
+            <th> Title </th>
+              <td colspan="6"><input id="w-250" type="text" required></td>
+          </tr>
+          <tr> 
+             <th> Rate </th>
+             <td colspan="6"> 
+              <input name="starpoint" type="radio" checked>★★★★★</input>
+              <input name="starpoint" type="radio">★★★★</input>
+              <input name="starpoint" type="radio">★★★</input>
+              <input name="starpoint" type="radio">★★</input>
+              <input name="starpoint" type="radio">★</input>
+            </td> 
+          </tr>
+        </table>
+        <div id="contents-box">
+          <textarea id ="contents" required></textarea>
+        </div>
+        <table id="table2">
+          <tr>
+            <th>Attachment1</th>
+            <td colspan="6"><input type="file"> </td>
+          </tr>
+          <tr>
+            <th>Attachment2</th>
+            <td colspan="6"><input type="file"> </td>
+          </tr>
+          <tr>
+            <th>Attachment3</th>
+            <td colspan="6"><input type="file"> </td>
+          </tr>
+          <tr>
+            <th>Attachment4</th>
+            <td colspan="6"><input type="file"> </td>
+          </tr>
+          <tr>
+            <th>Attachment5</th>
+            <td colspan="6"><input type="file"> </td>
+          </tr>
+          <tr>
+            <th>Password</th>
+            <td colspan="6"><input id="w-250" type="password"> </td>
+          </tr>
+        
+      </table>
+      <div id="button-box">
+      <div id="base-button">
+        <button id="bt-color" type="button"> LIST </button> 
+        <button id="bt-color" type="button" class="send-btn"> SEND </button>        
+      </div>
+    </div>
+    </inform>
+  </div>
+  <script src="/script/review.js"></script>
+</body>
+</html>

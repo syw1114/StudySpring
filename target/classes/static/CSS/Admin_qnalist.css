@@ -1,0 +1,117 @@
+.qnalist-table {
+    text-align: center;
+
+    border-collapse: collapse;
+    border: 0;
+    border-spacing: 0;
+
+    width: 100%
+}
+
+.tb-title {
+    text-align: center;
+
+    margin: 10px 0 20px;
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+th {
+    padding: 15px 0px 14px;
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    font-weight: normal;
+}
+
+td {
+    padding: 15px 0px 14px;
+}
+
+.tb-left{
+    text-align: left;
+}
+
+.th-no {
+    width: 70px;
+}
+
+.th-pdinfo {
+    width: 300px;
+}
+
+.th-post {
+    width: 84px;
+}
+
+.th-date {
+    width: 77px;
+}
+
+tbody {
+    border-bottom: 1px solid #eee;
+}
+
+.tfoot-menu {
+    display: flex;
+    justify-content: end;
+
+    margin-right: 15px;
+
+    padding: 15px 0px;
+
+    width: 100%;
+      
+}
+
+.tfoot-menu button {
+    border: none;
+
+    font-size: 12px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-num {
+    display: flex;
+    margin: 50px 0px;
+
+    font-size: 12px;
+}
+
+.page-num ul {
+    padding: 0;
+    margin: 0;
+}
+
+.page-num li {
+    display: inline-block;
+    list-style: none;
+}
+
+.page-num a {
+    display: flex;
+    align-items: center;
+}
+
+.page-num li a {
+    display: block;
+    text-align: center;
+    
+    width: 33px;
+    padding: 9px 0;
+    color: #9999;
+}
+
+.board-search input {
+    color: #000;
+    width: 162px;
+}
+
