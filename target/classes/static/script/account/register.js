@@ -20,8 +20,10 @@ let ajaxOption = {
     contentType : "application/json",
     data: JSON.stringify(user),
     dataType : "json",
-    success : (response) => {
-        console.log(response);
+    success : (response, textStatus, request) => {
+        alert("회원가입에 성공하셨습니다.")
+        const successURI = request.getResponseHeader("Location");
+        location.replace(successURI + "?email=" + response.data);
     },
     error : (error) => {
               console.log(error.responseJSON);

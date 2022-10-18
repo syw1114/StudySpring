@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -46,9 +46,9 @@
         <div class="login">
             <div class="account-container">
             <section class="account-current">
-                <form action="" method="post">
+                <form action="/account/Login" method="post">
                   <h2 class="account-subtitle">로그인</h2>
-                  <input type="email" class="account-input" name="username" placeholder="이메일" required>
+                  <input type="email" class="account-input" name="username" th:value="${email}" placeholder="이메일" required>
                   <input type="password" class="account-input" name="password" placeholder="비밀번호" required>
                   <a class="find-password-link"href="">비밀번호를 잊으셨나요?</a>
                   <button type="submit" class="btn account-button">로그인</button>

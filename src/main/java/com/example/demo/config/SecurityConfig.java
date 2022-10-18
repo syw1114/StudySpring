@@ -20,7 +20,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/Login")
+                .loginPage("/account/Login")
+                .loginProcessingUrl("/account/Login")
                 .defaultSuccessUrl("/index"); // 돌려줄곳이없으면 여기로
 
     }

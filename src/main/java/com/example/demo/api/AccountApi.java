@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,6 @@ public class AccountApi {
         accountService.duplicateEmail(signUpDto);
         accountService.register(signUpDto);
 
-        return ResponseEntity.created(null).body(new CMRespDto<>("회원가입 성공", signUpDto.getId()));
+        return ResponseEntity.created(URI.create("/account/Login")).body(new CMRespDto<>("회원가입 성공", signUpDto.getId()));
     }
 }

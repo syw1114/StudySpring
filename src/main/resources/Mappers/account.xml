@@ -44,7 +44,7 @@
         um.email = #{email}
     </select>
 
-    <insert id = "saveUser">
+    <insert id = "saveUser" parameterType="com.example.demo.domain.User">
         insert into
             user_mst
         values(
@@ -52,8 +52,8 @@
             #{email},
             #{password},
             #{name},
-            null,
-            1,
+            #{provider},
+            #{role_id},
             now(),
             now()
         )

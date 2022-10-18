@@ -3,6 +3,7 @@ package com.example.demo.dto;
 import com.example.demo.domain.User;
 import com.example.demo.dto.validation.ValidationGroups;
 import lombok.Data;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -45,9 +46,10 @@ public class SignUpDto {
     public User toEntity(){
         return User .builder()
                 .email(id)
-                .password(password)
+                .password(new BCryptPasswordEncoder().encode(password))
                 .name(name)
                 .address(address)
+                .role_id(1)
                 .build();
     }
 }
