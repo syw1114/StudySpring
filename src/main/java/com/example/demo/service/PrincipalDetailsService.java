@@ -28,6 +28,8 @@ public class PrincipalDetailsService implements UserDetailsService {
             throw new CustomInternalServerErrorException("회원 정보 조회 오류");
         }if (user == null){
             throw new IllegalStateException("잘못 된 사용자 정보");
-        }return new PrincipalDetails(user);
+        }
+        System.out.println("123213");
+        return new PrincipalDetails(user);
     }
 }

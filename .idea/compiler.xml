@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="StudySpring1" />
         <module name="demo" />
+        <module name="StudySpring" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="StudySpring" options="-parameters" />
       <module name="StudySpring1" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
