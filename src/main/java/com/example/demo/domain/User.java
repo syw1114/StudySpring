@@ -23,7 +23,6 @@ public class User {
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 
-
     private Role role;
 
 

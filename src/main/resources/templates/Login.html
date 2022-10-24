@@ -6,8 +6,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="/static/CSS/Main1.css">
 <link rel="stylesheet" href="/static/CSS/Login.css">
-<link rel="stylesheet" href="/static/images">
 </head>
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+
+    var message = [[${message}]];
+    alert(message);
+
+    /*]]>*/
+
+</script>
 <body>
 	<div id="container">
         <div class="aaaa">
@@ -48,8 +57,14 @@
             <section class="account-current">
                 <form action="/account/Login" method="post">
                   <h2 class="account-subtitle">로그인</h2>
-                  <input type="email" class="account-input" name="username" th:value="${email}" placeholder="이메일" required>
-                  <input type="password" class="account-input" name="password" placeholder="비밀번호" required>
+                    <div th:if="${error == 'auth'}">
+
+                    </div>
+                    <div th:if="${error == 'passwordExpired'}">
+
+                    </div>
+                    <input type="text" class="account-input" name="email" th:value="${email}" placeholder="이메일" required>
+                    <input type="password" class="account-input" name="password" placeholder="비밀번호" required>
                   <a class="find-password-link"href="">비밀번호를 잊으셨나요?</a>
                   <button type="submit" class="btn account-button">로그인</button>
                   <div class="hr-sect">OR</div>
@@ -59,6 +74,6 @@
         </div>
         </div>
     </div>
-    <script src="/script/Mainmenu.js"></script>
+    <script src="/static/script/Mainmenu.js"></script>
 </body>
 </html>
