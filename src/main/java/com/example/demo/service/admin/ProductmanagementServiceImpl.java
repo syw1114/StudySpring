@@ -6,6 +6,7 @@ import com.example.demo.repository.admin.ProductManagementRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,7 +17,11 @@ public class ProductmanagementServiceImpl implements ProductManagementService {
 
     @Override
     public List<CategoryResponseDto> getCategoryList() throws Exception {
-        return null;
+        List<CategoryResponseDto> categoryResponseDtos = new ArrayList<CategoryResponseDto>();
+        productManagementRepository.getCategoryList().forEach(category -> {
+            categoryResponseDtos.add(category.toDto());
+        });
+        return categoryResponseDtos;
     }
 
     @Override
