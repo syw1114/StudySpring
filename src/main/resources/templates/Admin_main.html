@@ -5,33 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/Admin-main.css">
+    <link rel="stylesheet" href="/static/CSS/Main1.css">
+    <link rel="stylesheet" href="/static/CSS/productmain.css">
 </head>
 <body>
     <div id="container">
-        <div class="header">
-            <div class="header-logo"><h1>JP STUDIO Admin</h1></div>
-            <div class="header-menu">
-                <button type="button" class="header-btn">USER PAGE</button>
-                <button type="button" class="header-btn">LOGOUT</button>
+        <div class="aaaa">
+            <div>
+                <h1 style="margin:20px 0 40px 40px">JP Studio Admin</h1>
+            </div>
+            <div class="right-menu">
+            <ul>
+                <li>USERPAGE</li>
+                <li>LOGOUT</li>
+            </ul>
             </div>
         </div>
-        <div class="main-container">
-            <div class="left-aside">
-                <button type="button" class="left-menu">회원 관리</button>
-                <button type="button" class="left-menu">상품 관리</button>
-                    <ul class="left-menu-sub">
-                        <li ><a herf="#">상품 등록</a></li>
-                        <li ><a herf="#">상품 수정</a></li>
-                        <li ><a herf="#">상품 리뷰</a></li>
-                    </ul>
-                <button type="button" class="left-menu">문의 관리</button>
-            </div>
-            <div class="">
-
-            </div>
+        <div class ="left-side">
+        <ul class="big_menu">
+            <li><a href="#">회원 관리</a></li>
+            <li class="menu-list"><a href="#">상품 관리</a>
+                <ul class="small_menu">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 수정</a></li>
+                    <li><a href="#">상품 리뷰</a></li>
+                </ul>
+            </li>
+            <li><a href="#">문의 관리</a></li>
+        </ul>
         </div>
-
-    </div> 
+        <div class="admin-content">
+            <div id ="producttable">
+                <form>
+                    <table id ="pro-table">
+                        <thead id="pro-thead">
+                            <tr>
+                                <th colspan="2"> <h2>PRODUCT REGISTRATION</h2> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="pro-tbody">
+                            <tr>
+                                <th> 분류 </th>
+                                <td><select name="분류" >
+                                    <option value ="Collaboration">Collaboration</option>
+                                    <option value ="NewArrival">NewArrival</option>
+                                    <option value ="Outwear">Outwear</option>
+                                    <option value ="Kintwear">Kintwear</option>
+                                    <option value ="Sweatshirt">Sweatshirt</option>
+                                    <option value ="shirts">Shirts</option>
+                                    <option value ="Bottom">Bottom</option>
+                                    <option value ="Accessories">Accessories</option>
+                                    </select>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <th> <label for = "대표사진"> 대표사진 </label> </th> 
+                                <td> <input id = "대표사진" type ="file" required> </td>
+                            </tr>
+        
+                            <tr>
+                                <th> <label for = "상세사진"> 상세사진 </label> </th> 
+                                <td> <input id = "상세사진" type ="file" required> </td>
+                            </tr>
+        
+                            <tr>
+                                <th> <label for="상품명"> 상품명 </label> </th>
+                                <td><input id="상품명" type="text" required></td>
+                            </tr>
+        
+                            <tr>
+                                <th> <label for="상품가격"> 상품가격 </label> </th>
+                                <td><input id="상품가격" type="text" required></td>
+                            </tr>
+                            <tr>
+                                <th> <label for="상품수량"> 상품수량 </label> </th>
+                                <td> <input id="상품수량" type="number" min="0" required></td>
+                            </tr>
+                            <tr>
+                                <th> <label for="상품소개"> 상품소개 </label></th>
+                                <td><textarea id="상품소개" rows="10" required></textarea></td>
+                            </tr>
+        
+                        </tbody>
+                        <tfoot id="pro-tfoot">
+                            <tr>
+                                <td colspan="2">
+                                    <button class ="black_btn" type ="submit">수정</button>
+                                    <button class ="black_btn" type ="submit">등록</button>
+                                 </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <script src="/static/script/Mainmenu.js"></script>
 </body>
 </html>
