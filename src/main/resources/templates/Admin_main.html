@@ -46,53 +46,54 @@
                         <tbody id="pro-tbody">
                             <tr>
                                 <th> 분류 </th>
-                                <td><select name="분류" >
-                                    <option value ="Collaboration">Collaboration</option>
-                                    <option value ="NewArrival">NewArrival</option>
-                                    <option value ="Outwear">Outwear</option>
-                                    <option value ="Kintwear">Kintwear</option>
-                                    <option value ="Sweatshirt">Sweatshirt</option>
-                                    <option value ="shirts">Shirts</option>
-                                    <option value ="Bottom">Bottom</option>
-                                    <option value ="Accessories">Accessories</option>
+                                <td>
+                                    <select class="product-inputs" >
+                                        <option value ="none">상품종류</option>
+                                        <option value ="1">Collaboration</option>
+                                        <option value ="2"></option>
+                                        <option value =""></option>
+                                        <option value =""></option>
+                                        <option value =""></option>
+                                        <option value =""></option>
+                                        <option value =""></option>
                                     </select>
                                 </td>
                             </tr>
         
                             <tr>
                                 <th> <label for = "대표사진"> 대표사진 </label> </th> 
-                                <td> <input id = "대표사진" type ="file" required> </td>
+                                <td> <input id = "대표사진" type ="" > </td>
                             </tr>
         
                             <tr>
                                 <th> <label for = "상세사진"> 상세사진 </label> </th> 
-                                <td> <input id = "상세사진" type ="file" required> </td>
+                                <td> <input id = "상세사진" type ="" > </td>
                             </tr>
         
                             <tr>
                                 <th> <label for="상품명"> 상품명 </label> </th>
-                                <td><input id="상품명" type="text" required></td>
+                                <td> <input class="product-inputs" type="text" ></td>
                             </tr>
         
                             <tr>
                                 <th> <label for="상품가격"> 상품가격 </label> </th>
-                                <td><input id="상품가격" type="text" required></td>
+                                <td><input class="product-inputs" type="text" ></td>
                             </tr>
                             <tr>
                                 <th> <label for="상품수량"> 상품수량 </label> </th>
-                                <td> <input id="상품수량" type="number" min="0" required></td>
+                                <td> <input class="product-inputs" type="number" min="0" ></td>
                             </tr>
                             <tr>
                                 <th> <label for="상품소개"> 상품소개 </label></th>
-                                <td><textarea id="상품소개" rows="10" required></textarea></td>
+                                <td><textarea class="product-inputs" rows="10" ></textarea></td>
                             </tr>
         
                         </tbody>
                         <tfoot id="pro-tfoot">
                             <tr>
                                 <td colspan="2">
-                                    <button class ="black_btn" type ="submit">수정</button>
-                                    <button class ="black_btn" type ="submit">등록</button>
+                                    <button class ="black_btn" type="button">수정</button>
+                                    <button class ="submit_btn" type="button">등록</button>
                                  </td>
                             </tr>
                         </tfoot>
@@ -104,5 +105,6 @@
     </div>
     </div>
     <script src="/static/script/Mainmenu.js"></script>
+    <script src="/static/script/admin/productregister.js"></script>
 </body>
 </html>

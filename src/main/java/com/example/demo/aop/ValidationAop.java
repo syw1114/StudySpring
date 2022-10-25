@@ -23,14 +23,14 @@ public class ValidationAop {
 
     //Pointcut -> 이 시점에 사용하겠다.
     //추가적으로 demo 패키지 아래 Api 객체의 모든 메서드에 이 pointcut을 적용시키겠다.
-    @Pointcut("execution(* com.example.demo..*Api.*(..))")
-    private void executionPointCut() {}
+    @Pointcut("@annotation(com.example.demo.aop.annotation.ValidAspect)")
+    private void annotationPointCut() {}
 
 
     //타겟 메서드를 감싸서 특정 Advice를 실행한다는 의미
     //어드바이스가 타겟 메소드를 감싸서 타겟 메소드 호출전과 후에 어드바이스 기능을 수행
     //어라운드가 적용될 포인트컷 명시.
-    @Around("executionPointCut()")
+    @Around("annotationPointCut()")
 
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         //메서드 호출 자체를 감쌈.

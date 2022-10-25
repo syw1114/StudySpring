@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/Admin-main.css">
-    <link rel="stylesheet" href="/CSS/Admin-qnawrite.css">
+    <link rel="stylesheet" href="/static/CSS/Main1.css">
+    <link rel="stylesheet" href="/static/CSS/Admin-qnawrite.css">
 </head>
 <body>
     <div id="container">
-        <div class="header">
-            <div class="header-logo"><h1>JP STUDIO Admin</h1></div>
-            <div class="header-menu">
-                <button type="button" class="header-btn">USERPAGE</button>
-                <button type="button" class="header-btn">LOGOUT</button>
+        <div class="aaaa">
+            <div>
+                <h1 style="margin:20px 0 40px 40px">JP Studio Admin</h1>
+            </div>
+            <div class="right-menu">
+            <ul>
+                <li>USERPAGE</li>
+                <li>LOGOUT</li>
+            </ul>
             </div>
         </div>
-        <div class="main-container">
-            <div class="left-aside">
-                <button type="button" class="left-menu">회원 관리</button>
-                <button type="button" class="left-menu">상품 관리</button>
-                    <ul class="left-menu-sub">
-                        <li ><a herf="#">상품 등록</a></li>
-                        <li ><a herf="#">상품 목록</a></li>
-                        <li ><a herf="#">상품 리뷰</a></li>
-                    </ul>
-                <button type="button" class="left-menu">문의 관리</button>
-            </div>
-            <div class="main-contents">
+        <div class ="left-side">
+        <ul class="big_menu">
+            <li><a href="#">회원 관리</a></li>
+            <li class="menu-list"><a href="#">상품 관리</a>
+                <ul class="small_menu">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 수정</a></li>
+                    <li><a href="#">상품 리뷰</a></li>
+                </ul>
+            </li>
+            <li><a href="#">문의 관리</a></li>
+        </ul>
+        </div>
+            <div class="admin-content">
                 <form action="">
                 <table class="qnawrite-table">
                     <thead>
@@ -38,18 +44,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th><label for="title">제목</label></th>
+                            <th><label for="title">Title</label></th>
                             <td><input type="text" id="title" name="title" placeholder="글 제목" required></td>
                         </tr>
                         <tr>
-                            <th><label for="content">내용</label></th>
-                            <td><textarea name="content" id="content" placeholder="글 내용" required></textarea>
+                            <td colspan="2"><textarea name="content" id="content" placeholder="글 내용" required></textarea>
                         </tr>
                     </tbody>
                 </table>
-                <div class="tfoot-menu2">
-                <button type="submit">글쓰기</button>
-                <button type="reset">초기화</button>
+                <div class="tfoot-menu">
+                    <div class="tfoot-menu1">
+                        <button type="button">List</button>
+                    </div>
+                    <div class="tfoot-menu2">
+                        <button type="submit">Write</button>
+                        <button type="reset">Reset</button>
+                    </div>
                 </div>
             </form>
             </div>
@@ -57,5 +67,6 @@
 
     </div> 
     
+    <script src="/static/script/Mainmenu.js"></script>
 </body>
 </html>

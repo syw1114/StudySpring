@@ -1,55 +1,64 @@
+.admin-content {
+    margin-left: 200px;
+    margin-right: 50px;
 
-        #producttable {
-            display : flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 100px;
-        }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width : 800px;
+}
 
-        #pro-table { 
-            width : auto;
-            height :100%;
-            font-size: 13px;
-            }
+#pro-table { 
+    width : 600px;
+    height :600px;
+    font-size: 13px;
+}
 
-        #pro-tbody input {
-            font-size: 13px;
-        }
+#pro-tbody input {
+    font-size: 13px;
+}
 
-        #pro-tfoot > tr > td {
-            text-align: end;
-            border : none;
-        }
+#pro-tfoot > tr > td {
+    text-align: end;
+    border : none;
+}
 
-        #pro-tfoot > tr > td > button{
-            font-size: 13PX;
+#pro-tfoot > tr > td > button{
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 100px;
+    background-color: black;
+    color : white;
 
-        }
+}
 
-        th,td {
-            border : 1px solid #141414;
-            border-radius: 1px;
-        }
+th,td {
+    border : 1px solid gray;
+    border-radius: 1px;
+}
 
-        input[type="text"],
-        input[type="number"]
-         {
-            box-sizing : border-box;
-            width :100%;
-            border : none;
-            outline : none;
-            text-align : left;
-        }
+input[type="text"],
+input[type="number"]
+    {
+    box-sizing : border-box;
+    width :100%;
+    border : none;
+    outline : none;
+    text-align : left;
+}
 
-        textarea {
-            border: none;
-            width : 98%;
-            height : 99%;
-            resize: none;
-            font-size: 13px;
-        }
-         
-        select {
-            border : none;
-            font-size: 13px;
-        }
+textarea {
+    border: none;
+    width : 98%;
+    height : 99%;
+    resize: none;
+    font-size: 13px;
+}
+    
+select {
+    border : none;
+    font-size: 13px;
+}
