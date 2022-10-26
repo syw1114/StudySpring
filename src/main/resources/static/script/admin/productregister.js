@@ -2,14 +2,12 @@ class ProductMst {
     #category;
     #name;
     #price;
-    #prcount;
     #simpleInfo;
 
-    constructor(category,name,price,prcount,simpleInfo){
+    constructor(category,name,price,simpleInfo){
         this.#category = category;
         this.#name=name;
         this.#price=price;
-        this.#prcount=prcount;
         this.#simpleInfo=simpleInfo;
       }
 
@@ -21,9 +19,6 @@ class ProductMst {
     
       getPrice(){return this.#price;}
       setPrice(price){this.#price = price;}
-
-      getPrcount(){return this.#prcount;}
-      setPrcount(prcount){this.#prcount = prcount;}
     
       getSimpleInfo(){return this.#simpleInfo;}
       setSimpleInfo(simpleInfo){this.#simpleInfo =simpleInfo;}
@@ -33,7 +28,6 @@ class ProductMst {
           category : this.#category,
           name : this.#name,
           price : this.#price,
-          prcount : this.#prcount,
           simpleInfo : this.#simpleInfo
         }
         return obj;
@@ -93,7 +87,6 @@ class RegisterEventService{
   #categorySelectObj;
   #nameInputObj;
   #priceInputObj;
-  #productCountObj;
   #productInfoObj;
   #registButtonObj;
 
@@ -101,16 +94,15 @@ class RegisterEventService{
     this.#categorySelectObj = document.querySelectorAll(".product-inputs")[0];
     this.#nameInputObj = document.querySelectorAll(".product-inputs")[1];
     this.#priceInputObj = document.querySelectorAll(".product-inputs")[2];
-    this.#productCountObj = document.querySelectorAll(".product-inputs")[3];
-    this.#productInfoObj = document.querySelectorAll(".product-inputs")[4];
-    this.#registButtonObj= document.querySelector(".submit_btn");
+    this.#productInfoObj = document.querySelectorAll(".product-inputs")[3];
+    this.#registButtonObj= document.querySelector(".regist-button");
 
     this.init();
 
     this.addCategorySelectEvent();
     this.addNameInputEvent();
     this.addPriceInputEvent();
-    this.addProductCountEvent();
+ 
     this.addRegistButtonEvent();
 
   } 
@@ -118,8 +110,7 @@ class RegisterEventService{
   init(){
     this.#nameInputObj.disabled = true;
     this.#priceInputObj.disabled = true;
-    this.#productCountObj.disabled = true;
-    this.#productInfoObj.disabled = true;
+  
     this.#registButtonObj.disabled = true;
   }
 
@@ -146,20 +137,14 @@ class RegisterEventService{
 
   addPriceInputEvent() {
     this.#priceInputObj.onkeyup = () => {
-      if(this.#priceInputObj.value.length != 0){
-        this.#productCountObj.disabled = false;
-      }else {
-        this.#productCountObj.disabled = true;
-      }
-    }
-  }
+      const registerInfo = document.querySelector(".regist-info")
 
-  addProductCountEvent() {
-    this.#productCountObj.onkeyup = () => {
-      if(this.#productCountObj.value.length != 0){
-        this.#productInfoObj.disabled = false;
-      }else {
-        this.#productInfoObj.disabled = true;
+      if(this.#priceInputObj.value.length != 0){
+        this.#registButtonObj.disabled = false;
+        registerInfo.classList.remove("regist-info-invisible");
+      }else {     
+        this.#registButtonObj.disabled = true;
+        registerInfo.classList.add("regist-info-invisible");
       }
     }
   }
@@ -170,11 +155,11 @@ class RegisterEventService{
       const category = this.#categorySelectObj.value;
       const name = this.#nameInputObj.value;
       const price = this.#priceInputObj.value;
-      const prcount = this.#productCountObj.value;
+
       const simpleInfo = this.#productInfoObj.value;
       
       const productMst = new ProductMst(
-        category,name,price,prcount,simpleInfo
+        category,name,price,simpleInfo
         );
   
         const registerApi = new RegisterApi();
@@ -189,7 +174,6 @@ const ProductRegistration = {
     RegisterEventService.addCategorySelectEvent();
     RegisterEventService.addNameInputEvent();
     RegisterEventService.addPriceInputEvent();
-    RegisterEventService.addProductCountEvent();
     RegisterEventService.addRegistButtonEvent();
   }
 }
@@ -231,7 +215,7 @@ class RegisterService{
 
 setRegisterHeaderEvent() {
     new RegisterEventService();
-}
+  }
 }
 
 window.onload = () => {

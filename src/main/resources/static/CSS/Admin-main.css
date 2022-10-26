@@ -106,4 +106,27 @@ button {
     padding-right: 5%;
     padding-left: 5%;
     
+
 }
+
+@keyframes visible{
+    from {
+      height: 0px;
+    }
+    to {
+      height: 200px;
+    }
+  }
+  
+  @keyframes invisible{
+    from{
+      height: 200px;
+    }
+    to{
+      height: 0px;
+    }
+  }
+  
+.product-mst-list td:nth-child(1){
+    width: 10%;
+  }
