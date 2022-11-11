@@ -18,7 +18,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
-
+    
     @Override
     public void duplicateEmail(SignUpDto signUpDto) throws Exception {
 
