@@ -18,7 +18,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
-    
+
     @Override
     public void duplicateEmail(SignUpDto signUpDto) throws Exception {
 
@@ -34,6 +34,7 @@ public class AccountServiceImpl implements AccountService {
         //회원가입 진행
     }
 
+
     @Override
     public void register(SignUpDto signUpDto) throws Exception{
         User user = signUpDto.toEntity();
@@ -43,6 +44,8 @@ public class AccountServiceImpl implements AccountService {
         }
     }
 
+
+
     @Override
     public void address(UserAddressReqDto userAddressReqDto) throws Exception {
         UserAddress userAddress = userAddressReqDto.toEntity();
@@ -50,9 +53,17 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public UserAddressReqDto getUserAddress(int userId) throws Exception {
-        return accountRepository.getUserAddress(userId).toDto();
+    public void updateUser (SignUpDto signUpDto) throws Exception {
+        User user = signUpDto.toEntity();
+        accountRepository.updateUser(user);
     }
+
+//    @Override
+//    public UserAddressReqDto getUserAddress(int userId) throws Exception {
+//        return accountRepository.getUserAddress(userId).toDto();
+//    }
+
+
 
     @Override
     public CheckoutRespDto getPaymentProduct(int pdtDtlId) throws Exception {

@@ -44,6 +44,16 @@ public class AccountCtroller {
         return "account/signUp";
     }
 
+    @GetMapping("/account/myPage")
+    public String myPage(Model model, @AuthenticationPrincipal PrincipalDetails principalDetails){
+        model.addAttribute("user", principalDetails.getUser());
+
+
+        return "account/updateMypage";
+    }
+
+
+
     @GetMapping("/account/order")
     public String loadPayment(Model model,
                              @RequestParam int pdtDtlId,

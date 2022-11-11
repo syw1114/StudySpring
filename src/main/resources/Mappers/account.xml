@@ -23,6 +23,18 @@
         <result property="update_date" column="update_date" />
     </resultMap>
 
+    <update id ="updateUser"  parameterType="com.example.demo.domain.User">
+        update
+            user_mst
+        set
+            password = #{password},
+            name = #{name},
+            phone = #{phone},
+            update_date = now()
+        where
+            username = #{username}
+    </update>
+
     <update id="saveUserAddress" parameterType="com.example.demo.domain.UserAddress">
         update
             user_dtl
@@ -55,6 +67,7 @@
         where
             um.username = #{username}
     </select>
+
     <select id="getUserAddress" resultType="com.example.demo.domain.UserAddress">
         SELECT
             ud.address1,
@@ -65,6 +78,7 @@
         WHERE
             id = #{id}
     </select>
+
     <select id="getPaymentProduct" resultType="com.example.demo.domain.PaymentProduct">
 
         SELECT

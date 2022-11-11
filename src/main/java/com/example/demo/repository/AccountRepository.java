@@ -13,4 +13,6 @@ public interface AccountRepository {
     public UserAddress getUserAddress(int userId) throws Exception;
     public PaymentProduct getPaymentProduct(int pdtDtlId) throws Exception;
 
+    public int updateUser(User user) throws Exception;
+
 }

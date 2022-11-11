@@ -38,6 +38,16 @@ public class AccountApi {
         return ResponseEntity.created(URI.create("/account/login")).body(new CMRespDto<>("회원가입 성공", signUpDto.getUsername()));
     }
 
+    @LogAspect
+    @PutMapping("/updateMypage")
+    public ResponseEntity<?> userUpdate(@RequestBody SignUpDto signUpDto) throws Exception {
+
+        accountService.updateUser(signUpDto);
+
+        return ResponseEntity.ok()
+                .body(new CMRespDto<>("Update successfully",true));
+    }
+
     @GetMapping("/principal")
     public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) throws Exception {
         return ResponseEntity.ok().body(new CMRespDto<>("유저 정보 가져오기", principalDetails != null ? principalDetails.getUser() : null));
