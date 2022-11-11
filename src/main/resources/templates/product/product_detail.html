@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.thymeleaf.org">
+<head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/CSS/Main1.css">
+     <link rel="stylesheet" href="/static/images">
+    <link rel="stylesheet" href="/static/CSS/Details.css">
+    <link rel="stylesheet" href="/static/CSS/detail-body.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div th:replace="~{fragment/header :: header}"></div>
+        <div th:replace="~{fragment/aside :: aside}"></div>
+        <div class="top">
+            <div class="image">
+                <img src="/static/details-images/CORDUROY WES SHIRT [NAVY].jpg" alt="이미지1">
+            </div>
+            <div class="infoArea">
+                <div class="price">
+                    <form action="/account/order" method="get">
+                        <div class="pName" colspan="3"> </div>
+                        <div class="line"></div>
+                    <table class="detail-table">
+                        <tr>
+                            <th class="pdt-price">Price</th>
+                            <td class="pdt-price" colspan="2"><span class="price-value"></span></td>
+                        </tr>
+                        <tr>
+                            <th class="pdt-size">SIZE</th>
+                            <td class="pdt-size" colspan="2">
+                                <select class="size-select" name="pdtDtlId">
+                                    <option value="">[필수] 옵션을 선택해주세요.</option>
+<!--                                    <option value="XL">XL</option>-->
+<!--                                    <option value="L">L</option>-->
+<!--                                    <option value="M">M</option>-->
+<!--                                    <option value="S">S</option>-->
+<!--                                    <option value="XS">XS</option>-->
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="guideArea">
+                        <p class="info1">
+                            (최소주문수량 1개 이상)
+                        </p>
+                        <p class="info2">
+                            <img class="icon-img" src="/static/images/icon.png" alt="">
+                            위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.
+                        </p>
+                    </div>
+                    <table class="selected-table">
+                        <tbody class="pdt-tbody">
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                    <table>
+                        <tfoot>
+                            <tr>
+                                <td><strong> 총 상품금액</strong>(수량): <strong>₩<span class="totalPrice">0</span></strong>(수량 개)</td>
+                            </tr>
+                            
+                        </tfoot>
+                    </table>
+                    <div class="btn-group">
+                        <button class="btn-buy" type="submit">BUY NOW</button>
+                        <button class="btn-add-cart" type="button">ADD TO CART</button>
+
+                        <!-- <img src="/static/images/buy-now.png" alt="구매 버튼"> -->
+                        <!-- <img src="/static/images/btn-add-cart.png" alt="장바구니 버튼"> -->
+                    </div>
+                    
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div id="detail-img">
+<!--             
+                <div><img src ="/static/details-images/상세사진 1.jpg"></div>
+                <div><img src ="/static/details-images/navy3.png"></div>
+                <div><img src ="/static/details-images/navy4.png"></div>
+                <div><img src ="/static/details-images/INFO1.jpg"></div> -->
+          </div>
+            <div id="b-box">
+              
+                <div id ="review">
+                    <div id="l">REVIEW</div>
+                    <div id="r">
+                        <button id="but-w" type ="button"> WRITE </button> 
+                        <button id="but-l" type ="button"> LIST </button>  
+                    </div>
+                </div>
+                
+                <div id ="qna">
+                    <div id="l">Q&A</div>
+                    <div id="r">
+                        <button id="but-w" type ="button"> WRITE </button>
+                        <button id="but-l" type ="button"> LIST </button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <script src="/static/script/product/product-details-get.js"></script>
+</body>

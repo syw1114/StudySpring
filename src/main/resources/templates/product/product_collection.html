@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head th:replace="~{fragment/head :: head}"></head>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script> <!--jquery 사용-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="stylesheet" href="/static/CSS/Main1.css">
+ <link rel="stylesheet" href="/static/images">
+ <link rel="stylesheet" href="/static/CSS/collection_product.css">
+</head>
+<body>
+    <div id="container">
+        <div th:replace="~{fragment/header :: header}"></div>
+        <div th:replace="~{fragment/aside :: aside}"></div>
+        <main>
+              <ul class="collection-products">
+                <li class="collection-product">
+                 
+              </ul>
+              <ul class="page-num">
+            </ul>
+          </main>
+
+    </div>
+    <script src="/static/script/main/aside_menu.js"></script>
+    <script src="/static/script/product/product_collection.js"></script>
+</body>
+</html>

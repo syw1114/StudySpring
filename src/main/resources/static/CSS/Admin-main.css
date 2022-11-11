@@ -1,7 +1,6 @@
-* { 
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+* {
+    font-family: "Karla,Times New Roman,malgun gothic,맑은고딕,NanumGothic,dotum,돋움,sans-serif";
+
 }
 
 html, body {
@@ -10,13 +9,13 @@ html, body {
 
 }
 
-.admin-content {
-    margin-left: 200px;
-    margin-right: 50px;
+body {
+    font-size: 11px;
 }
+
 #container {
     display: flex;
-    
+    flex-direction: column;
 
     height: 100%;
 }
@@ -24,19 +23,20 @@ html, body {
 .header{
     display: flex;
     flex-direction: column;
+
     width: 100%;
-    padding-bottom: 20px;
-    
+    height: 300px;
 
 }
 
 .header-logo {
     text-align: center;
 
-    height: 20px;
-    font-weight: 50px;
-    font-size: 15px;
+    height: 200px;
 
+    color: white;
+    font-size: 40px;
+    text-shadow: 4px 8px 10px gray;
 }
 
 .header-menu {
@@ -62,7 +62,7 @@ html, body {
 
 .left-aside {
     width: 300px;
-    height: 100%;
+
     display: flex;
     flex-direction: column;
 }
@@ -70,7 +70,7 @@ html, body {
 .left-menu {
     border: none;
     
-    font-size: 20px;
+    font-size: 30px;
 
     background-color: rgba(0, 0, 0, 0);
 
@@ -78,11 +78,12 @@ html, body {
 
 .main-container .left-aside:hover .left-menu-sub{
     display: block;
-    position: relative;
+  position: relative;
 } 
 
 .left-menu-sub li {
     list-style: none;
+
     font-size: 1.3em;
 }
 
@@ -94,7 +95,6 @@ html, body {
 button {
     cursor: pointer;
 }
-
 .main-contents {
     display: flex;
     flex-direction: column;
@@ -106,27 +106,4 @@ button {
     padding-right: 5%;
     padding-left: 5%;
     
-
 }
-
-@keyframes visible{
-    from {
-      height: 0px;
-    }
-    to {
-      height: 200px;
-    }
-  }
-  
-  @keyframes invisible{
-    from{
-      height: 200px;
-    }
-    to{
-      height: 0px;
-    }
-  }
-  
-.product-mst-list td:nth-child(1){
-    width: 10%;
-  }

@@ -11,20 +11,33 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.signup field{
+.field{
+    font-size: 13px;
     margin-bottom : 5px;
+
+  
 }
 .signup b{
     /* border: 1px solid #000; */
     display: block; /*수직 정렬하기 */
     margin-bottom: 5px;
 }
+
+.ktg{
+margin-bottom: 20px;
+border-bottom: 1px solid rgb(198, 198, 198);
+padding-bottom: 20px;
+font-size: 16px;
+
+}
 .signup input{
-    border: 1px solid #dadada;
-    box-sizing: border-box;
-    height: 40px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 10px;
     width: 100%;
-    margin-bottom: 5px;
+    height: 40px;
+    color : #8F8F91;
+    line-height: 40px;
 }
 .signup input[type=button],
 .signup input[type=submit]{
@@ -60,3 +73,16 @@
     flex:1;
 }
 
+
+#postcode-search{
+    padding : 1px 6px;
+    background-color: rgb(198, 198, 198);
+    font-weight: bold;
+}
+
+.account-button{
+    margin-top: 5px;
+    background-color: rgb(198, 198, 198);
+    font-weight: bold;
+
+}

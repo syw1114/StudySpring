@@ -20,12 +20,10 @@ import java.util.Map;
 @Component
 
 public class ValidationAop {
-
     //Pointcut -> 이 시점에 사용하겠다.
     //추가적으로 demo 패키지 아래 Api 객체의 모든 메서드에 이 pointcut을 적용시키겠다.
     @Pointcut("@annotation(com.example.demo.aop.annotation.ValidAspect)")
     private void annotationPointCut() {}
-
 
     //타겟 메서드를 감싸서 특정 Advice를 실행한다는 의미
     //어드바이스가 타겟 메소드를 감싸서 타겟 메소드 호출전과 후에 어드바이스 기능을 수행
@@ -43,7 +41,7 @@ public class ValidationAop {
                 break;
             }
         }
-        //에러가 있으면 if 실행
+       // 에러가 있으면 if 실행
         if(bindingResult.hasErrors()){
 
             //에러맵을 만들어냄

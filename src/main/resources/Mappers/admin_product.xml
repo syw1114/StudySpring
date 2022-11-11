@@ -4,21 +4,99 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.demo.repository.admin.ProductManagementRepository">
+
     <resultMap id="product_category" type="com.example.demo.domain.ProductCategory">
-        <result property="category_id" column="id" />
-        <result property="group_id" column="group_id" />
-        <result property="category_name" column="category_name" />
+        <result property="category_id" column="id"/>
+        <result property="group_id" column="group_id"/>
+        <result property="category_name" column="category_name"/>
     </resultMap>
 
-    <select id="getCategoryList"  resultMap="product_category">
+    <select id="getCategoryList" resultMap="product_category"><!--  join하면 무조건 resultMap-->
         select
-            id,
-            group_id,
-            category_name
+        id,
+        group_id,
+        category_name
         from
-            pdt_category_mst
+        pdt_category_mst
+    </select>
+
+    <insert id="saveProductMst" parameterType="com.example.demo.domain.Product">
+        insert into
+        pdt_mst
+        values(
+        0,
+        #{pdt_name},
+        #{category_id},
+        #{pdt_price},
+        now(),
+        now()
+        )
+    </insert>
+
+    <select id ="getProductMstList" resultType="com.example.demo.domain.OptionProductMst">
+        select
+            pm.id as pdt_id,
+            pcm.category_name as category,
+            pm.pdt_name
+        from
+            pdt_mst pm
+            left outer join pdt_category_mst pcm on(pcm.id = pm.category_id)
     </select>
 
 
+    <select id="getSizeList" parameterType="Integer" resultType="com.example.demo.domain.OptionProductSize">
+        select
+            psd.id as size_id,
+            psm.size_name
+        from
+            pdt_mst pm
+            left outer join pdt_category_mst pcm on(pcm.id = pm.category_id)
+            left outer join pdt_size_dtl psd on(psd.group_id = pcm.group_id)
+            left outer join pdt_size_mst psm on(psm.id = psd.size_id)
+       where
+            pm.id = #{productId}
+    </select>
+
+    <select id="findProductSize" parameterType="com.example.demo.domain.ProductDetail"  resultType="Integer">
+        select
+            count(*)
+        from
+            pdt_dtl
+        where
+            pdt_id = #{pdt_id}
+            and size_id = #{size_id}
+    </select>
+
+
+    <insert id="saveProductDtl" parameterType="com.example.demo.domain.ProductDetail">
+        insert into
+            pdt_dtl
+        values(
+                0,
+                #{pdt_id},
+                #{size_id},
+                #{pdt_stock},
+                now(),
+                now()
+            )
+    </insert>
+
+    <insert id="saveProductImg" parameterType="java.util.List">
+        insert into
+            pdt_image_mst
+        values
+
+        <foreach collection="list" item="img" separator=",">
+            (
+                0,
+                #{img.pdt_id},
+                #{img.origin_name},
+                #{img.save_name},
+            now(),
+            now()
+            )
+        </foreach>
+
+    </insert>
 
 </mapper>

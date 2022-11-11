@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/CSS/Main1.css">
+    <link rel="stylesheet" href="/static/CSS/Admin-qnawrite.css">
+</head>
+<body>
+    <div id="container">
+        <div class="aaaa">
+            <div>
+                <h1 style="margin:20px 0 40px 40px">JP Studio Admin</h1>
+            </div>
+            <div class="right-menu">
+            <ul>
+                <li>USERPAGE</li>
+                <li>LOGOUT</li>
+            </ul>
+            </div>
+        </div>
+        <div class ="left-side">
+        <ul class="big_menu">
+            <li><a href="#">회원 관리</a></li>
+            <li class="menu-list"><a href="#">상품 관리</a>
+                <ul class="small_menu">
+                    <li><a href="/admin/product/register">1차 상품등록</a></li>
+                    <li><a href="/admin/product/register/dtl">2차 상품등록</a></li>
+                    <li><a href="#">상품 수정</a></li>
+                </ul>
+            </li>
+            <li><a href="#">문의 관리</a></li>
+        </ul>
+        </div>
+            <div class="admin-content">
+                <form action="">
+                <table class="qnawrite-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">관리자 공지사항 글쓰기 폼입니다</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><label for="title">Title</label></th>
+                            <td><input type="text" id="title" name="title" placeholder="글 제목" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea name="content" id="content" placeholder="글 내용" required></textarea>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tfoot-menu">
+                    <div class="tfoot-menu1">
+                        <button type="button">List</button>
+                    </div>
+                    <div class="tfoot-menu2">
+                        <button type="submit">Write</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+
+    </div> 
+    
+    <script src="/static/script/main/aside_menu.js"></script>
+</body>
+</html>

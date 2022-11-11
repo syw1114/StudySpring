@@ -1,50 +1,235 @@
 * {
     box-sizing: border-box;
 }
+
 html, body {
     margin: 0px;
     height: 100%;
 }
+
 .container {
     width: 100%;
     
-    margin-top: 50px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .top {
     display: flex;
     justify-content: center;
 }
+
 .image {
-    margin-right: 50px;
+    margin-right: 20px;
 }
-.info {
+
+.infoArea {
     display: flex;
+
 }
+
 table {
-    text-align: center;
-    margin: 10px 0px;   
+    margin: 10px 0;   
+}
+
+.pdt-price {
+
+    font-size: 12px;
+
+    text-align: left;
+    padding: 7px 10px 8px 0;
+    vertical-align: middle;
+
+    
+}
+
+.pdt-size {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.info {
+    padding: 0 0 9px 10px;
+    font-size: 11px;
+    color: #f65b54;
+    line-height: 14px;
+}
+
+table {
+    width: 100%;
+}
+
+.detail-table th {
+    font-weight: 400;
+    font-size: 12px;
+
+    width: 115px;
+    padding: 7px 0 8px 0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.pName {
+    padding: 5px 0 10px 0;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.line {
+    border-top: 1px solid #e8e8e8;
+
+    height: 1px;
+
+    padding: 0 0 5px;
+    line-height: 1px;
+}
+
+.detail-table {
+    margin: 0px;
+}
+
+/* .detail-table th {
+    border-bottom: 1px solid #e8e8e8;
+}
+.detail-table td {
+    border-bottom: 1px solid #e8e8e8;
+} */
+
+.size-select {
+    width: 100%;
 }
 
 #count-box {
     width: 50px;
     text-align: center;
 }
-tfoot button {
-	font-size: 20px;
-	padding: 15px 30px;
-	margin: 10px 0px;
 
-    border-radius: 5px;
+.info1 {
+    margin: 7px 0 0;
+    padding: 8px 0 0 11px;
+
+    font-size: 11px;
+    color: #757575;
 }
-.btn1 {
+.info2 {
+    margin: 7px 0 0;
+    padding: 0 0 9px 10px;
+
+    font-size: 11px;
+    line-height: 14px;
+
+    color: #f65b54;
+    
+}
+.icon-img {
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.guideArea {
+    position: relative;
+}
+
+tfoot td{
+    font-size: 12px;
+    text-align: left;
+    padding: 19px 9px 19px;
+    vertical-align: middle;
+
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-group button {
+	font-size: 12px;
+	padding: 15px 30px;
+
+    width: 49%;
+
+}
+
+
+.btn-buy {
 	background-color: #000;
 	color: #fff;
+    border: none;
+}
+.btn-buy:hover {
+	background: #FE2E2E;
 }
 
-.btn1:hover {
-	background: #FE2E2E;
+.btn-add-cart {
+    background-color: grey;
+    color: white;
+    border: none;
+}
+
+.count-box {
+    width: 40px;
+
+    text-align: center;
+}
+
+.XL {
+    display: none;
+}
+
+.L{
+    display: none; 
+}
+
+.M{
+    display: none; 
+}
+
+.S{
+    display: none; 
+}
+
+.XS{
+    display: none; 
+}
+
+.pdt-tbody input {
+    text-align: center;
+}
+.pdt-tbody th {
+    border-top: 1px solid #e8e8e8;
+}
+.pdt-tbody td {
+    color: #353535;
+    line-height: 18px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    border-top: 1px solid #e8e8e8;
+}
+.pdt-tbody p {
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    line-height: 21px;
+}
+.pdt-price-td { 
+    width: 77px;
+    font-weight: 700;
+    text-align: right;
+}
+.pdt-tbody tr td p{
+    font-size: 12px;
+}
+.product-size{
+    color: #757575;
+    font-weight: 400;
+}
+
+.selected-table {
+    font-size: 12px;
 }

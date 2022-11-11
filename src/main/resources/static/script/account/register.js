@@ -5,25 +5,24 @@ registerButton.onclick = () => {
 
 
 let user = {
-    id : accountInput[0].value,
+    username : accountInput[0].value,
     password : accountInput[1].value,
     reconfirm : accountInput[2].value,
     name : accountInput[3].value,
-    registerNumber : accountInput[4].value + accountInput[5].value,
-    address : accountInput[6].value + accountInput[7].value + accountInput[8].value
+    phone : accountInput[4].value + accountInput[5].value + accountInput[6].value
     }
 
 let ajaxOption = {
     async : false,
     type : "post",
-    url : "/api/account/SignUp",
+    url : "/api/account/signUp",
     contentType : "application/json",
     data: JSON.stringify(user),
     dataType : "json",
     success : (response, textStatus, request) => {
         alert("회원가입에 성공하셨습니다.")
         const successURI = request.getResponseHeader("Location");
-        location.replace(successURI + "?email=" + response.data);
+        location.replace(successURI + "?username=" + response.data);
     },
     error : (error) => {
               console.log(error.responseJSON);

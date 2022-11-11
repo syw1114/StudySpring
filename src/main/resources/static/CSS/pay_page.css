@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#container{
+    display: flex;
+    justify-content: center; /*가로축을 기준으로 정렬*/
+
+    width:100%;
+
+    margin-top: 20px;
+}
+
+.main-box{
+    width:90%;
+    margin: auto;
+    padding: 30px 35px 0 15%;
+    min-height: 700px;
+
+}
+
+.order{ 
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.img-box{
+    padding: 15px 0px 14px;
+    width: 80px;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+table{
+    border-collapse:collapse;
+    text-align: left;
+    margin-top: 40px;
+  
+
+    width: 100%;
+}
+
+th, td{
+    border-bottom: 1px solid rgb(198, 198, 198);
+    font-size: 11px; 
+}
+  
+  thead th{
+    padding: 15px 0 14px;
+}
+
+tbody td{
+    padding: 25px 10px 25px;
+    text-align: left;
+}
+
+tbody textarea{
+    resize:none;
+
+    padding:5px 6px;
+    width: 563px;
+    height: 103px;
+
+    padding: 5px 6px;
+
+    border: 1px solid #000;
+    line-height: 1.5;
+}
+
+tfoot td {
+    text-align:right;
+}
+
+.left-line {
+    text-align: left;
+}
+
+.right-line {
+    text-align: right;
+
+}
+
+tfoot button {
+    border:none;
+
+    color:gray;
+    background-color: white;
+
+    padding: 30px 0px 30px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.button {
+ 
+    display: flex;
+    flex-direction: left;
+
+
+}
+
+.customer, .customer1 {
+    padding:5px;
+    width:200px;
+}
+
+.postcode, .postcode1{
+    padding:5px;
+    width:60px;
+
+}
+
+#search, .address-button {
+    border: 1px solid #eee;
+    background: #eee;
+    color:#000;
+    border-radius: 3px;
+    padding: 5px 14px;
+
+}
+
+.address, .address1,
+.detailAddress, .detailAddress1 {
+    width: 450px;
+    padding:2px 4px;
+    margin: 5px 5px 0 0;
+}
+
+.address-button{
+    display: flex;
+    align-items: flex-end;
+}
+
+.phone-number, .phone-number1 {
+    width:180px;
+    margin:0px 4px;
+    padding:2px 4px;
+}
+
+.principal-email {
+    width:230px;
+    padding:2px 4px;
+    margin-bottom: 5px;
+}
+.txtinfo {
+    list-style: none;
+}
+
+.required {
+    text-align: right;
+}
+
+.totalarea {
+    width: 100%;
+
+}
+
+.cols {
+    text-align: center;
+    height: 69px;
+    padding:15px 0px 14px;
+}
+
+.cols-button {
+    font-size: 8px;
+    margin-left: 5px;
+}
+
+.price {
+    text-align: center;
+    height: 58px;
+    padding: 15px 10px 14px;
+}
+
+.price1 {
+    padding: 11px 0px 10px;
+
+}
+.mile-info {
+    list-style: none;
+}
+.total-bottom {
+    margin-top: 0;
+}
+.buy {
+ 
+    height: 200px;
+
+    display:flex;
+    justify-content: flex-end;
+
+    margin-top: 20px;
+
+}
+
+
+.payment-button{
+
+    width: 150px;
+    height: 80px;
+    color: white;
+    background-color: black;
+
+    font-size: 15px;
+    cursor: pointer;
+
+}

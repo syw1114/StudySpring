@@ -1,12 +1,11 @@
 package com.example.demo.dto.admin;
 
-
 import lombok.Builder;
 import lombok.Data;
 
-@Data
 @Builder
+@Data
 public class CategoryResponseDto {
-    private int id;
-    private String name;
+    private int id; //value에는 id가 들어가고
+    private String name; //
 }

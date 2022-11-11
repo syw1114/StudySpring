@@ -5,10 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@Data
 public class ProductCategory {
     private int category_id;
     private int group_id;
@@ -20,4 +19,5 @@ public class ProductCategory {
                 .name(category_name)
                 .build();
     }
+
 }
