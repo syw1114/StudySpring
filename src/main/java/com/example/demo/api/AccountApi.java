@@ -48,6 +48,16 @@ public class AccountApi {
                 .body(new CMRespDto<>("Update successfully",true));
     }
 
+    @LogAspect
+    @DeleteMapping("/updateMypage")
+    public ResponseEntity<?> userDelete(@RequestBody SignUpDto signUpDto) throws Exception {
+
+        accountService.deleteUser(signUpDto);
+
+        return ResponseEntity.ok()
+                .body(new CMRespDto<>("Delete successfully",true));
+    }
+
     @GetMapping("/principal")
     public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) throws Exception {
         return ResponseEntity.ok().body(new CMRespDto<>("유저 정보 가져오기", principalDetails != null ? principalDetails.getUser() : null));

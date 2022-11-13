@@ -9,6 +9,6 @@ public interface AccountService {
     public void register(SignUpDto signUpDto) throws Exception;
     public void address(UserAddressReqDto userAddressReqDto) throws Exception;
     public CheckoutRespDto getPaymentProduct(int pdtDtlId) throws Exception;
-
+    public void deleteUser(SignUpDto signUpDto) throws Exception;
     public void updateUser(SignUpDto signUpDto) throws Exception;
 }

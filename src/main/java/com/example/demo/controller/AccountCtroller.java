@@ -46,8 +46,8 @@ public class AccountCtroller {
 
     @GetMapping("/account/myPage")
     public String myPage(Model model, @AuthenticationPrincipal PrincipalDetails principalDetails){
-        model.addAttribute("user", principalDetails.getUser());
 
+        model.addAttribute("user", principalDetails.getUser());
 
         return "account/updateMypage";
     }

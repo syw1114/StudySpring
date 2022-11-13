@@ -14,5 +14,5 @@ public interface AccountRepository {
     public PaymentProduct getPaymentProduct(int pdtDtlId) throws Exception;
 
     public int updateUser(User user) throws Exception;
-
+    public int deleteUser(User user) throws Exception;
 }

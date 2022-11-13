@@ -58,6 +58,11 @@ public class AccountServiceImpl implements AccountService {
         accountRepository.updateUser(user);
     }
 
+    public void deleteUser (SignUpDto signUpDto) throws Exception {
+        User user = signUpDto.toEntity();
+        accountRepository.deleteUser(user);
+    }
+
 //    @Override
 //    public UserAddressReqDto getUserAddress(int userId) throws Exception {
 //        return accountRepository.getUserAddress(userId).toDto();

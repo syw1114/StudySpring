@@ -23,6 +23,15 @@
         <result property="update_date" column="update_date" />
     </resultMap>
 
+    <delete id="deleteUser" parameterType="com.example.demo.domain.User">
+        delete
+            from
+            user_mst
+        where
+            username = #{username}
+
+    </delete>
+
     <update id ="updateUser"  parameterType="com.example.demo.domain.User">
         update
             user_mst
